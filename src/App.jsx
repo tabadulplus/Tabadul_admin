@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-// import AdminLayout from "./Layout/AdminLayout";
+import AdminLayout from "./Layout/AdminLayout";
 import ManagePosts from "./pages/ManagePosts";
 import ManageUsers from "./pages/ManageUsers";
 import ManageCategories from "./pages/ManageCategories";
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route>
+        <Route path="/" element={<AdminLayout />}>
           <Route index element={<Home />} />
           <Route path="posts" element={<ManagePosts />} />
           <Route path="users" element={<ManageUsers />} />
